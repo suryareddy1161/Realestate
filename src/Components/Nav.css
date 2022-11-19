@@ -1,0 +1,76 @@
+.navbar{
+    height: 10%;    
+    margin-left: 10px;
+
+}
+.rent{
+    margin-left: 20%;
+}
+.sell{
+    margin-left: 5%;
+}
+.buy{
+    margin-left: 5%;
+}
+.fav{
+    margin-left: 30%;
+    border-radius: 10%;
+    border: none;
+    background-color: coral;
+}
+.login{
+    margin-left: 5%;
+    border: none;
+    border-radius: 10%;
+    background-color: beige;
+}
+.signin{
+    margin-left: 3%;
+    background-color: aqua;
+    border: none;
+    border-radius: 10%;
+}
+
+/* //for search */
+
+.search{
+    margin-top: 30px;
+    margin-left: 15%;
+}
+.searchheading{
+    font-size: 40px;
+}
+.searchinput{
+    margin-left: 25%;
+}
+
+/*  */
+.card{
+    display: inline-flex;
+    margin-left: 15%;
+    margin-top: 25px;
+}
+.cardsame{
+    margin-left: 25%;
+}
+.searchbtn{
+    margin-left: 15%;
+    margin-top: 15px;
+}
+/* homecards */
+.homecards{
+    margin-top: 50px;
+    margin-left: 10%;
+    display: grid;
+    row-gap: 50px;
+    column-gap: 100px;
+    width: max-content;
+    grid-template-columns: auto auto auto;
+}
+.cardsh{
+    border: 1px solid black;
+   
+}
+.img{
+    width: 300px;
+}
