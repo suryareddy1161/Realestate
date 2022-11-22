@@ -3,9 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import "./Nav.css"
 import { addToCart , propertyType_search ,price_search,date_search,location_search ,filtered_data} from '../Redux/cartSlice';
 import Navbar from './Navbar';
+import CardContainer from './CardContainer';
 
 
-function Home() {
+function Main() {
 
   const [time , setTime] = useState("")
   const [location, setLocation] = useState("");
@@ -19,13 +20,13 @@ function Home() {
   
   // console.log(ele)
 
-
+/* 
   const clickHandler = (params) => {
     console.log(params)
 
     dispatch(addToCart(params))
 
-  }
+  } */
   const searchHandler = (...param) => {
     if(location.length > 0 ){
       dispatch(location_search(param[0]));
@@ -70,12 +71,12 @@ function Home() {
       <div className='card'>
         <div className='loc'>
           <div>Location</div>
-           <select>
+         {/*  <select>
             <option >Hyderabad</option>
             <option>Bangalore</option>
             <option>Delhi</option>
-          </select> 
-          {/* <input type="text"  name="location" onChange={changeHandler}/> */}
+          </select> */}
+          <input type="text"  name="location" onChange={changeHandler}/>
         </div>
         <div className='cardsame'>
           <div>When</div>
@@ -103,29 +104,13 @@ function Home() {
         <button className="search-btn" onClick={()=>searchHandler(location,price,propertyType,time)}>Search</button>
         </div>
       </div>
-      {
-
-      }
-      <div className='homecards'>
-        {data.map((item, id) => {
-          return (
-            <div key={id} className='cardsh'>
-
-              <div>{item.name}</div>
-              <img className='img' src={item.img}></img>
-              <div>{item.price} /per Month</div>
-              <div>Location :- {item.location} </div>
-              <div>Type:- {item.propertyType}</div>
-              <div>Date :- {item.date}</div>
-              <button className='add' onClick={() => clickHandler(item)}>Add To Fav</button>
-            </div>
-          )
-
-        })
-        }
+      <div>
+        <CardContainer/>
       </div>
+      
+     
     </div>
   )
 }
 
-export default Home
+export default Main
