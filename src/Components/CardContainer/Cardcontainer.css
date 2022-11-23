@@ -1,0 +1,37 @@
+.card-container{
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:1rem;
+    margin: auto;
+    padding-bottom: 6rem;
+    justify-items: center;
+  }
+  
+  @media(max-width: 1400px) {
+    .card-container{
+      width: 80vw;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap:1rem;
+      margin: auto;
+      padding-bottom: 6rem;
+      justify-items: center;
+    }
+    
+  }
+  
+  @media screen and (max-width: 460px) {
+    .card-container{
+      width: 80vw;
+      margin: 0 auto;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap:1rem;
+      padding-bottom: 6rem;
+      justify-items: center;
+    }
+    
+  }
+  
+  @media screen and (max-width: 769px) {
+  
+  }
